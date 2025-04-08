@@ -1,0 +1,25 @@
+﻿<Window x:Class="LibraryManagementSystem.Windows.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManagementSystem.Windows"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="679">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="411" Margin="10,10,0,0" VerticalAlignment="Top" Width="655" Source="/Images/RegisterBackground.png"/>
+        <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Margin="102,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtLast" HorizontalAlignment="Left" Margin="102,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtFirst" HorizontalAlignment="Left" Margin="102,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtAddress" HorizontalAlignment="Left" Margin="102,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="TxtPass" HorizontalAlignment="Left" Margin="102,288,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="33,79,0,0" VerticalAlignment="Top"/>
+        <Label Content="LastName" HorizontalAlignment="Left" Margin="33,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="FirstName" HorizontalAlignment="Left" Margin="33,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="33,223,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="33,279,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="204" Margin="367,48,0,0" VerticalAlignment="Top" Width="238" Source="/Images/RegisterIcon.png"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="102,348,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>

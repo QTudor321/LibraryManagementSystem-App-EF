@@ -1,0 +1,166 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <None Remove="Images\BookBufalloHunter.png" />
+    <None Remove="Images\BookCatchingFire.png" />
+    <None Remove="Images\BookCollectedGhostStories.png" />
+    <None Remove="Images\BookDreamCount.png" />
+    <None Remove="Images\BookFrankenstein.png" />
+    <None Remove="Images\BookGothicTales.png" />
+    <None Remove="Images\BookLogin.png" />
+    <None Remove="Images\BookOneWrongStep.png" />
+    <None Remove="Images\BookSearchIcon.png" />
+    <None Remove="Images\BookSplinterEffect.png" />
+    <None Remove="Images\BookTheDreamHotel.png" />
+    <None Remove="Images\BookTheFallOfThEHouse.png" />
+    <None Remove="Images\BookThisBookWillBury.png" />
+    <None Remove="Images\BookWhatWakesBells.png" />
+    <None Remove="Images\CardIcon.png" />
+    <None Remove="Images\CreamBackground.png" />
+    <None Remove="Images\GrayLoanUtil.png" />
+    <None Remove="Images\GreenBack.png" />
+    <None Remove="Images\GreenBackground.png" />
+    <None Remove="Images\LibrarianBookIcon.png" />
+    <None Remove="Images\LibrarianIcon.png" />
+    <None Remove="Images\LibrarianLoanIcon.png" />
+    <None Remove="Images\LibrarianUserIcon.png" />
+    <None Remove="Images\LibraryImage.png" />
+    <None Remove="Images\LoanIcon.png" />
+    <None Remove="Images\LoanUtilityIcon.png" />
+    <None Remove="Images\LoginBackground.png" />
+    <None Remove="Images\LoginText.png" />
+    <None Remove="Images\LogOut.png" />
+    <None Remove="Images\RegisterBackground.png" />
+    <None Remove="Images\RegisterIcon.png" />
+    <None Remove="Images\SearchBOOKIcon.png" />
+    <None Remove="Images\SubscriptionWindow.png" />
+    <None Remove="Images\UserProfileBackgroundWhite.png" />
+    <None Remove="Images\UserProfileIcon.png" />
+    <None Remove="Images\UserProfileWindowIcon.png" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Resource Include="Images\BookWhatWakesBells.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\BookBufalloHunter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookCatchingFire.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookCollectedGhostStories.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookDreamCount.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookFrankenstein.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookGothicTales.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookLogin.png" />
+    <Resource Include="Images\BookOneWrongStep.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookSearchIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookSplinterEffect.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookTheDreamHotel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookTheFallOfThEHouse.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BookThisBookWillBury.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CardIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CreamBackground.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\GrayLoanUtil.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\GreenBack.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LibrarianBookIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LibrarianIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LibrarianLoanIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LibrarianUserIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LibraryImage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LoanIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LoanUtilityIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LoginBackground.png" />
+    <Resource Include="Images\LoginText.png" />
+    <Resource Include="Images\LogOut.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\RegisterBackground.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\RegisterIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SearchBOOKIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SubscriptionWindow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UserProfileBackgroundWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UserProfileIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\UserProfileWindowIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="LibraryManagementSystem.Library.ManageUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManagementSystem.Library"
+        mc:Ignorable="d"
+        Title="ManageUsers" Height="450" Width="800">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="409" Margin="10,10,0,0" VerticalAlignment="Top" Width="771" Source="/Images/LibraryImage.png" Stretch="Fill"/>
+        <Button Content="Add User" HorizontalAlignment="Left" Margin="68,74,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Add Card" HorizontalAlignment="Left" Margin="270,74,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Delete User" HorizontalAlignment="Left" Margin="450,74,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Button Content="Update Card Credit" HorizontalAlignment="Left" Margin="650,74,0,0" VerticalAlignment="Top" Click="Button_Click_3"/>
+        <Button Content="Update Users Subscription Status" HorizontalAlignment="Left" Margin="94,297,0,0" VerticalAlignment="Top" Click="Button_Click_4"/>
+        <Grid x:Name="GridAddUser" Margin="68,131,587,142" Visibility="Collapsed">
+            <TextBox x:Name="TxtUsernameAdd" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtLastAdd" HorizontalAlignment="Left" Margin="0,18,0,0" TextWrapping="Wrap" Text="LastName" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtFirstNameAdd" HorizontalAlignment="Left" Margin="0,36,0,0" TextWrapping="Wrap" Text="FirstName" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtAddressAdd" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtPasswordAdd" HorizontalAlignment="Left" Margin="0,72,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtStatusAdd" HorizontalAlignment="Left" Margin="0,90,0,0" TextWrapping="Wrap" Text="SubscriptionStatus" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="72,113,0,3" Click="Button_Click_5"/>
+        </Grid>
+        <Grid x:Name="GridAddCard" Margin="270,131,400,192" Visibility="Collapsed">
+            <TextBox x:Name="TxtUserIDAddCard" HorizontalAlignment="Left" TextWrapping="Wrap" Text="UserID" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtCreditAddCard" HorizontalAlignment="Left" Margin="0,18,0,0" TextWrapping="Wrap" Text="Credit" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="80,41,0,0" VerticalAlignment="Top" Click="Button_Click_6"/>
+
+        </Grid>
+        <Grid x:Name="GridDeleteUser" Margin="450,131,230,185" Visibility="Collapsed">
+            <TextBox x:Name="TxtUserIDDelete" HorizontalAlignment="Center" TextWrapping="Wrap" Text="UserID" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Delete" HorizontalAlignment="Left" Margin="60,43,0,23" Click="Button_Click_7"/>
+        </Grid>
+        <Grid x:Name="GridUpdateCardCredit" Margin="632,131,30,166" Visibility="Collapsed">
+            <TextBox x:Name="TxtCardIDUpdateCredit" HorizontalAlignment="Center" TextWrapping="Wrap" Text="CardID" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtCardCreditUpdateCredit" HorizontalAlignment="Center" Margin="0,18,0,0" TextWrapping="Wrap" Text="Credit" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Update" HorizontalAlignment="Left" Margin="69,53,0,0" VerticalAlignment="Top" Click="Button_Click_8"/>
+
+        </Grid>
+        <Grid x:Name="GridUpdateStatus" Margin="297,280,354,15" Visibility="Collapsed">
+            <TextBox x:Name="TxtUserIDStatus" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="UserID" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtUserStatusStatus" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="SubscriptionStatus" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Update" HorizontalAlignment="Left" Margin="74,60,0,0" VerticalAlignment="Top" Click="Button_Click_9"/>
+
+        </Grid>
+        <Button Content="Menu" HorizontalAlignment="Left" Margin="670,340,0,0" VerticalAlignment="Top" Click="Button_Click_10"/>
+
+    </Grid>
+</Window>

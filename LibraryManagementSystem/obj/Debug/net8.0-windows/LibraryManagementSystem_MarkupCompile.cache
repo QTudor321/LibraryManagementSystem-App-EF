@@ -1,0 +1,20 @@
+﻿LibraryManagementSystem
+
+
+winexe
+C#
+.cs
+C:\Users\PC\UNITBV Informatica\IV\Tehnici_Avansate_de_Programare\Proiect\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\net8.0-windows\
+LibraryManagementSystem
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\PC\UNITBV Informatica\IV\Tehnici_Avansate_de_Programare\Proiect\LibraryManagementSystem\LibraryManagementSystem\App.xaml
+12-1289893482
+
+31-1905110305
+2281465840480
+Library\LibrarianMainWindow.xaml;Library\ManageBooks.xaml;Library\ManageLoans.xaml;Library\ManageUsers.xaml;UsersWindows\LoanBook.xaml;UsersWindows\SearchBook.xaml;UsersWindows\SubscribedLibraryMainWindow.xaml;Windows\LibraryMainWindow.xaml;Windows\LoginWindow.xaml;Windows\RegisterWindow.xaml;Windows\SubscriptionWindow.xaml;Windows\UserProfile.xaml;
+
+False
+
