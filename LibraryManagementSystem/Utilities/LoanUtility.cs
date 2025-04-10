@@ -38,15 +38,15 @@ namespace LibraryManagementSystem.Utilities
                 MessageBox.Show("Insufficient credit to loan the book!");
                 return false;
             }
-            book.copies -= 1;//retragerea unei carti din depozit, dupa imprumut
-            card.credit -= book.price;//retragerea creditului din card dupa imprumut
-            await _databaseContext.SaveChangesAsync();//salvarea retragerii creditului in baza de date
-            var loan = new Loans//crearea unei noi inregistrari de imprumut
+            book.copies -= 1;
+            card.credit -= book.price;
+            await _databaseContext.SaveChangesAsync();
+            var loan = new Loans
             {
                 userID = userId,
                 bookID = bookId,
                 loandate = DateTime.Now,
-                duedate = DateTime.Now.AddDays(17),//se returneaza dupa 17 zile
+                duedate = DateTime.Now.AddDays(17),
                 loanstatus = "Active"
             };
             _databaseContext.Loans.Add(loan);
@@ -61,14 +61,12 @@ namespace LibraryManagementSystem.Utilities
         }
         public async Task<bool> ReturnBookAsync(int userId)
         {
-            //verificarea si salvarea informatiilor din inregistrarea loan
             var activeLoan = await _databaseContext.Loans.Include(l => l.Books).FirstOrDefaultAsync(l => l.userID == userId && l.loanstatus == "Active");
             if(activeLoan == null)
             {
                 MessageBox.Show("You don't have any active loans.");
                 return false;
             }
-            //Update informatiile despre tabelul loan
             activeLoan.loanstatus = "Returned";
             activeLoan.returndate = DateTime.Now;
             if (activeLoan.Books != null)
