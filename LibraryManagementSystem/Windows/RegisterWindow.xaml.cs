@@ -34,17 +34,16 @@ namespace LibraryManagementSystem.Windows
         {
             try
             {
-                string username = TxtUsername.Text;//initializarea unui obiect cu continutul din caseta text
+                string username = TxtUsername.Text;
                 string lastname = TxtLast.Text;
                 string firstname = TxtFirst.Text;
                 string address = TxtAddress.Text;
                 string password = TxtPass.Password;
-                bool registerSuccess = await _loginUtility.RegisterFunction(username, lastname, firstname, address, password);//initializarea unui bool prin utilitate
+                bool registerSuccess = await _loginUtility.RegisterFunction(username, lastname, firstname, address, password);
 
-                if (registerSuccess)//daca este adevarat
+                if (registerSuccess)
                 {
                     MessageBox.Show("Register successful!");
-                    // Navigate to LibraryMainWindow
                     LoginWindow loginWindow = new LoginWindow(_databaseContext);
                     loginWindow.Show();
                     this.Close();
