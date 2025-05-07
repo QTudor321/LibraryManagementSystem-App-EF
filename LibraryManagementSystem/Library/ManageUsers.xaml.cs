@@ -100,7 +100,8 @@ namespace LibraryManagementSystem.Library
                 firstname = TxtFirstNameAdd.Text,
                 address = TxtAddressAdd.Text,
                 password = TxtPasswordAdd.Text,
-                subscriptionstatus = byte.Parse(TxtStatusAdd.Text)
+                subscriptionstatus = byte.Parse(TxtStatusAdd.Text),
+                isLibrarian = byte.Parse(TxtLibByteAdd.Text)
             };
 
             bool result = await _userUtility.AddUserAsync(newUser);
@@ -111,8 +112,10 @@ namespace LibraryManagementSystem.Library
         {
             int userId = int.Parse(TxtUserIDAddCard.Text);
             decimal credit = decimal.Parse(TxtCreditAddCard.Text);
-
-            bool result = await _userUtility.AddCardAsync(userId, credit);
+            string number=TxtNumberAddCard.Text;
+            DateTime expiration = DateTime.Parse(TxtExpirationAddCard.Text);
+            string cvv=TxtCVVAddCard.Text;
+            bool result = await _userUtility.AddCardAsync(userId, credit, number, expiration, cvv);
             MessageBox.Show(result ? "Card added!" : "Failed to add card.");
         }
 

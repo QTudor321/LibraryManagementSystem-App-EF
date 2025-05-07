@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\PC\UNITBV Informatica\IV\Tehnici_Avansate_de_Programare\Proiect\LibraryManagementSystem\LibraryManagementSystem\App.xaml
 12-1289893482
 
-3392074170
+34-1046426621
 2281465840480
 Library\LibrarianMainWindow.xaml;Library\ManageBooks.xaml;Library\ManageLoans.xaml;Library\ManageUsers.xaml;UsersWindows\LoanBook.xaml;UsersWindows\SearchBook.xaml;UsersWindows\SubscribedLibraryMainWindow.xaml;Windows\LibraryMainWindow.xaml;Windows\LoginWindow.xaml;Windows\RegisterWindow.xaml;Windows\SubscriptionWindow.xaml;Windows\UserProfile.xaml;
 
-False
+True
 

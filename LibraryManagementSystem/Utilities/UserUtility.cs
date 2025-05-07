@@ -21,20 +21,25 @@ namespace LibraryManagementSystem.Utilities
             {
                 return false;
             }
+            user.password = HashUtility.ComputeSha256Hash(user.password);
             _databaseContext.Users.Add(user);
             await _databaseContext.SaveChangesAsync();
             return true;
         }
-        public async Task<bool> AddCardAsync(int userId, decimal credit)
+        public async Task<bool> AddCardAsync(int userId, decimal credit, string number, DateTime expiration, string cvv)
         {
             var user = await _databaseContext.Users.Include(u => u.Cards).FirstOrDefaultAsync(u => u.userID == userId);
             if (user == null)
             {
                 return false;
             }
+            var hashedNumber = HashUtility.ComputeSha256Hash(number);
             var card = new Cards
             {
                 userID = userId,
+                number = hashedNumber,
+                expiration = expiration,
+                cvv = cvv,
                 credit = credit
             };
             _databaseContext.Cards.Add(card);

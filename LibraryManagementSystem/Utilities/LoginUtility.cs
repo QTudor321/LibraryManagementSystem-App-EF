@@ -13,15 +13,15 @@ namespace LibraryManagementSystem.Utilities
         {
             _libraryDatabaseContext = libraryDatabaseContext;
         }
-        //Utilitatea de logare
         public async Task<Users?> LoginFunction(string username, string password) {
             try
             {
-                var user = await _libraryDatabaseContext.Users.FirstOrDefaultAsync(u => u.username == username && u.password == password);//verificarea facuta de functia FirstOrDefaultAsync din libraria EntityFramework
+                string hashedPassword = HashUtility.ComputeSha256Hash(password);
+                var user = await _libraryDatabaseContext.Users.FirstOrDefaultAsync(u => u.username == username && u.password == hashedPassword);
                 if (user != null)
                     return user;
                 else
-                    return null;//dupa verificare, daca obiectul user este nenul va returna obiectul
+                    return null;
             }
             catch (Exception ex)
             {
@@ -29,7 +29,6 @@ namespace LibraryManagementSystem.Utilities
                 return null;
             }
         }
-        //Utilitatea de inregistrare
         public async Task<bool> RegisterFunction(string username, string firstname, string lastname, string address, string password)
         {
             var existinguser = await _libraryDatabaseContext.Users.FirstOrDefaultAsync(u => u.username == username);
@@ -37,14 +36,16 @@ namespace LibraryManagementSystem.Utilities
             {
                 return false;
             }
+            var hashedPassword = HashUtility.ComputeSha256Hash(password);
             var newUser = new Users
             {
                 username = username,
                 firstname = firstname,
                 lastname = lastname,
                 address = address,
-                password = password,
-                subscriptionstatus = 0
+                password = hashedPassword,
+                subscriptionstatus = 0,
+                isLibrarian = 0
             };
             _libraryDatabaseContext.Users.Add(newUser);
             await _libraryDatabaseContext.SaveChangesAsync();

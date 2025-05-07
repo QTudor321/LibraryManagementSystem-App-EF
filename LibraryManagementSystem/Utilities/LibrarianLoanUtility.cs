@@ -25,7 +25,6 @@ namespace LibraryManagementSystem.Utilities
 
             loan.returndate = DateTime.Now;
             loan.loanstatus = "Returned";
-            //Incrementarea copiilor de carti dupa ce a fost modificat imprumutul
             var book = await _libraryDatabaseContext.Books.FindAsync(loan.bookID);
             if (book != null)
             {

@@ -17,7 +17,9 @@ namespace LibraryManagementSystem.Entities
         public string password { get; set; }
         [Required]
         public byte subscriptionstatus { get; set; }
-        public ICollection<Cards> Cards { get; set; }//incarcarea cardurilor utilizatorului
+        [Required]
+        public byte isLibrarian { get; set; }
+        public ICollection<Cards> Cards { get; set; }
 
     }
 }

@@ -81,7 +81,7 @@ namespace LibraryManagementSystem.UsersWindows
             bool loanresult = await _loanUtility.LoanBookAsync(_loggedUser.userID, _currentBook.bookID);
             if (loanresult)
             {
-                _currentBook = await _libraryDatabaseContext.Books.FirstOrDefaultAsync(b => b.bookID == _currentBook.bookID);//reincarcarea informatiilor dupa imprumut pe fereastra
+                _currentBook = await _libraryDatabaseContext.Books.FirstOrDefaultAsync(b => b.bookID == _currentBook.bookID);
                 TxtTitle.Text = _currentBook.title;
                 TxtTheme.Text = _currentBook.theme;
                 TxtAuthor.Text = _currentBook.author;

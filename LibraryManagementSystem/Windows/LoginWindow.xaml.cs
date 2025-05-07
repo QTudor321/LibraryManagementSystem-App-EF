@@ -22,7 +22,7 @@ namespace LibraryManagementSystem
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private Users _loggedInUser;//pentru memorarea identificatorului utilizatorului logat 
+        private Users _loggedInUser;
         private readonly LoginUtility _loginUtility;
         private readonly LibraryDatabaseContext _databaseContext;
         public LoginWindow(LibraryDatabaseContext librarycontext)
@@ -46,29 +46,27 @@ namespace LibraryManagementSystem
                 MessageBox.Show("User must be logged in!");
                 return;
             }
-            SubscriptionWindow subscriptionWindow = new SubscriptionWindow(_databaseContext, _loggedInUser.userID);//folosirea obiectelor in abonare
+            SubscriptionWindow subscriptionWindow = new SubscriptionWindow(_databaseContext, _loggedInUser.userID);
             subscriptionWindow.Show();
             this.Close();
         }
-        //Implementarea evenimentului Butonul de logare
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            string username = TxtUsername.Text;//initializarea unui obiect cu continutul din caseta text
+            string username = TxtUsername.Text;
             string password = TxtPassword.Password;
-            var loginSuccess = await _loginUtility.LoginFunction(username, password);//initializarea unui bool pron utilitate
-            if (loginSuccess!=null)//daca este salvat rezultatul logarii in functia de verificare a informatiilor
+            var loginSuccess = await _loginUtility.LoginFunction(username, password);
+            if (loginSuccess!=null)
             {
-                _loggedInUser = loginSuccess;//salvarea utilizatorului logat in obiect
+                _loggedInUser = loginSuccess;
                 MessageBox.Show("Login successful!");
-                //Verificarea starii de abonare si navigare la fereastra care corespunde starii de abonare
                 try
                 {
-                    if (loginSuccess.username == "Greg123" && loginSuccess.password == "Librarianpass1234")
+                    if (loginSuccess.isLibrarian == 1)
                     {
                         LibrarianMainWindow librarianWindow = new LibrarianMainWindow(_databaseContext);
                         librarianWindow.Show();
                     }
-                    else if (loginSuccess.subscriptionstatus == 1)
+                    else if (loginSuccess.subscriptionstatus == 1 && loginSuccess.isLibrarian == 0)
                     {
                         SubscribedLibraryMainWindow subscribedWindow = new SubscribedLibraryMainWindow(_databaseContext, _loggedInUser);
                         subscribedWindow.Show();

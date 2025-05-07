@@ -20,12 +20,16 @@
             <TextBox x:Name="TxtAddressAdd" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="TxtPasswordAdd" HorizontalAlignment="Left" Margin="0,72,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="TxtStatusAdd" HorizontalAlignment="Left" Margin="0,90,0,0" TextWrapping="Wrap" Text="SubscriptionStatus" VerticalAlignment="Top" Width="120"/>
-            <Button Content="Add" HorizontalAlignment="Left" Margin="72,113,0,3" Click="Button_Click_5"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="72,137,0,3" Click="Button_Click_5"/>
+            <TextBox x:Name="TxtLibByteAdd" HorizontalAlignment="Left" Margin="0,108,0,0" TextWrapping="Wrap" Text="IsLibrarian" VerticalAlignment="Top" Width="120"/>
         </Grid>
-        <Grid x:Name="GridAddCard" Margin="270,131,400,192" Visibility="Collapsed">
+        <Grid x:Name="GridAddCard" Margin="270,131,400,178" Visibility="Collapsed">
             <TextBox x:Name="TxtUserIDAddCard" HorizontalAlignment="Left" TextWrapping="Wrap" Text="UserID" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="TxtCreditAddCard" HorizontalAlignment="Left" Margin="0,18,0,0" TextWrapping="Wrap" Text="Credit" VerticalAlignment="Top" Width="120"/>
-            <Button Content="Add" HorizontalAlignment="Left" Margin="80,41,0,0" VerticalAlignment="Top" Click="Button_Click_6"/>
+            <TextBox x:Name="TxtCreditAddCard" HorizontalAlignment="Left" Margin="0,72,0,0" TextWrapping="Wrap" Text="Credit" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="81,95,0,0" VerticalAlignment="Top" Click="Button_Click_6"/>
+            <TextBox x:Name="TxtExpirationAddCard" HorizontalAlignment="Left" Margin="0,36,0,0" TextWrapping="Wrap" Text="ExpirationDate" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtCVVAddCard" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" Text="CVV" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtNumberAddCard" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="120" Margin="0,18,0,0"/>
 
         </Grid>
         <Grid x:Name="GridDeleteUser" Margin="450,131,230,185" Visibility="Collapsed">

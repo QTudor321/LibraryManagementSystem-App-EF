@@ -14,7 +14,8 @@ namespace LibraryManagementSystem.Utilities
         }
         public async Task<bool> ProcessSubscription(string number, DateTime expiration, string cvv, int userID)
         {
-            var card = await _databaseContext.Cards.Include(c => c.Users).FirstOrDefaultAsync(c => c.number == number && c.expiration.Date == expiration.Date && c.cvv == cvv && c.userID == userID);
+            string hashedNumber = HashUtility.ComputeSha256Hash(number);
+            var card = await _databaseContext.Cards.Include(c => c.Users).FirstOrDefaultAsync(c => c.number == hashedNumber && c.expiration.Date == expiration.Date && c.cvv == cvv && c.userID == userID);
             if (card == null)
             {
                 MessageBox.Show("Card is invalid");

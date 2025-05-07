@@ -16,7 +16,7 @@ namespace LibraryManagementSystem
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);//initializarea evenimentului
+            base.OnStartup(e);
             var loginwindow = serviceProvider.GetRequiredService<LoginWindow>();
             loginwindow.Show();
         }

@@ -33,5 +33,20 @@ CREATE Table Loans(
 	loandate DATETIME NOT NULL,
 	duedate DATETIME NOT NULL,
 	returndate DATETIME NULL,
-	loanstatus VARCHAR(20) NOT NULL DEFAULT 'Act	ive'
+	loanstatus VARCHAR(20) NOT NULL DEFAULT 'Active'
 );
+--parolele si numerele de card trebuie hashuite inainte sa fie inserate in baza de date, deci fara instructiuni insert in afara de carti
+ALTER TABLE Users
+ADD isLibrarian TINYINT NOT NULL DEFAULT 0;
+ALTER TABLE Users ALTER COLUMN password VARCHAR(255);
+ALTER TABLE Cards ALTER COLUMN number VARCHAR(255);
+UPDATE Users
+SET isLibrarian = 1
+WHERE username = 'Greg123';
+UPDATE Users
+SET subscriptionstatus = 1
+WHERE username = 'Greg123';
+SELECT * From Cards;
+SELECT * From Users;
+SELECT * From Loans;
+SELECT * From Books;
