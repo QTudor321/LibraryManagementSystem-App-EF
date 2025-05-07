@@ -35,7 +35,6 @@ CREATE Table Loans(
 	returndate DATETIME NULL,
 	loanstatus VARCHAR(20) NOT NULL DEFAULT 'Active'
 );
---parolele si numerele de card trebuie hashuite inainte sa fie inserate in baza de date, deci fara instructiuni insert in afara de carti
 ALTER TABLE Users
 ADD isLibrarian TINYINT NOT NULL DEFAULT 0;
 ALTER TABLE Users ALTER COLUMN password VARCHAR(255);
